@@ -12,7 +12,7 @@ import { Reveal } from './motion';
 const FAQ = [
   {
     q: 'Which videos does it work with?',
-    a: 'YouTube links work best, since the app can read the subtitles, description and chapters. Written tutorials work too. Instagram and TikTok block automated reading, so for those, paste the text or upload the clip instead.'
+    a: 'YouTube links work best, since the app can read the subtitles, description and chapters. Written tutorials work too, and a TikTok link gives us the caption — often the whole method on a short build post, though there are no subtitles to read. Instagram needs an account to show anything, so for those, upload the clip or paste the caption instead.'
   },
   {
     q: 'What if the video never says the measurements out loud?',
