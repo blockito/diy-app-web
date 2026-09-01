@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink antialiased;
+  }
+
+  /* Headlines are set tight and balanced; the serif does the work, so it is
+     never asked to also be large and loose at the same time. */
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  ::selection {
+    @apply bg-forest text-cream;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-forest ring-offset-2 ring-offset-cream rounded-sm;
+  }
+}
+
+@layer utilities {
+  .rule {
+    @apply border-t border-line;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
