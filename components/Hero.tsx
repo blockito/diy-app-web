@@ -34,7 +34,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
             className="mt-6 font-display text-[clamp(2.6rem,6vw,4.4rem)] leading-[1.03] tracking-[-0.02em] text-ink"
           >
-            Turn any DIY video into an interactive build guide in seconds.
+            Turn any DIY video into a guide you can build from.
           </motion.h1>
 
           <motion.p

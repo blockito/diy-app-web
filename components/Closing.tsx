@@ -136,15 +136,13 @@ function Footer() {
               title: 'Legal',
               links: [
                 { label: 'Privacy policy', href: 'https://diy-app-backend.onrender.com/privacy' },
-                { label: 'Terms of service', href: '/terms' }
+                { label: 'Terms of service', href: 'https://diy-app-backend.onrender.com/terms' }
               ]
             },
             {
               title: 'Contact',
               links: [
-                { label: 'support@diyguide.app', href: 'mailto:support@diyguide.app' },
-                { label: 'Instagram', href: 'https://instagram.com' },
-                { label: 'YouTube', href: 'https://youtube.com' }
+                { label: 'support@diyguide.app', href: 'mailto:support@diyguide.app' }
               ]
             }
           ].map(group => (

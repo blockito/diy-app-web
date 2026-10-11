@@ -1,10 +1,14 @@
 import {
+  BellRing,
   BookmarkCheck,
   Clapperboard,
   ClipboardList,
+  Clock,
   Hammer,
+  Images,
   Link2,
   ListChecks,
+  ShoppingBasket,
   Timer,
   WifiOff
 } from 'lucide-react';
@@ -102,9 +106,24 @@ const FEATURES = [
     body: 'Bookmark what you mean to build. The half-finished one is waiting on the home screen when you come back.'
   },
   {
-    Icon: Hammer,
-    title: 'A place that grows as you build',
-    body: 'Every guide you finish repairs part of a cottage that is yours. Sixteen builds restore it; the garden keeps going after that.'
+    Icon: Clock,
+    title: 'What it really took',
+    body: 'The guide claims an hour. The app times the work — ignoring the four hours a step spent curing — and tells you the truth, and what guides like it take for everybody else.'
+  },
+  {
+    Icon: Images,
+    title: 'Before and after, in one tap',
+    body: 'Photograph the bare wall before you start and what you made of it after. The two become one card, ready to post, without opening anything else.'
+  },
+  {
+    Icon: BellRing,
+    title: 'One reminder, and only one',
+    body: 'A build that goes quiet for two days gets a single notification saying what is left. One, ever, for that build — nothing here is going to nag you about a shelf.'
+  },
+  {
+    Icon: ShoppingBasket,
+    title: 'One shopping list, added up',
+    body: 'Everything you have started or saved collects into a single list. Two guides that both want wood screws make one line saying fifty, not two lines saying twenty and thirty.'
   }
 ];
 
