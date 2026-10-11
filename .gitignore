@@ -4,3 +4,6 @@ out/
 .env*.local
 next-env.d.ts
 *.tsbuildinfo
+
+# macOS Finder metadata, created just by opening the folder.
+.DS_Store
