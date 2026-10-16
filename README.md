@@ -17,6 +17,41 @@ site and the product look like the same thing rather than two designs that happe
 agree about green. Junge sets the headlines, Judson the titles, Inter anything that has
 to be read rather than admired.
 
+## Deploying it
+
+Nothing here has ever been deployed; it has only ever run on localhost, which
+means the waitlist has never collected an address from anybody.
+
+The page is static and `/api/waitlist` is one serverless function, which is
+exactly Vercel's free tier. Next.js needs no configuration file for it.
+
+```bash
+npm i -g vercel
+vercel login          # "Continue with GitHub", as blockito
+vercel --prod         # first run asks to link the repo; accept the defaults
+```
+
+Then set **one** environment variable in the Vercel project (Settings →
+Environment Variables), or the deployed page will accept addresses and store
+none of them — see the next section for what each does:
+
+| | |
+| --- | --- |
+| `FORMSPREE_ENDPOINT` | simplest; needs a free Formspree form |
+| `SUPABASE_URL` + `SUPABASE_SERVICE_KEY` | writes to the same Supabase project the app uses |
+
+The service key is a secret and belongs in Vercel's dashboard, never in this
+repo and never on a laptop. Redeploy after setting it.
+
+A custom domain goes in the same settings page. `diyguide.app` is registered
+but parked at GoDaddy, so pointing it here is a nameserver change.
+
+**If you would rather not create a hosting account**, the alternative is a
+static export on GitHub Pages — this repo is public, so that is free — with the
+waitlist moved to a `POST /waitlist` on the FastAPI backend, which already runs
+and already holds Supabase credentials. It costs an architecture change and
+leaves you on a `github.io` URL until a domain is pointed at it.
+
 ## The waitlist actually has to work
 
 `app/api/waitlist/route.ts` validates the address and then stores it with whichever
