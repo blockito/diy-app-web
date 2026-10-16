@@ -142,7 +142,11 @@ function Footer() {
             {
               title: 'Contact',
               links: [
-                { label: 'support@diyguide.app', href: 'mailto:support@diyguide.app' }
+                // One address, and one that works. diyguide.app is registered but parked
+                // with no MX records, so mail to support@ there bounces; the privacy
+                // policy and the store listing both use this one. Swap all three
+                // together the day the domain has a mailbox.
+                { label: 'viki.miklosova100@gmail.com', href: 'mailto:viki.miklosova100@gmail.com' }
               ]
             }
           ].map(group => (
